@@ -5,9 +5,9 @@
              x:Class="EastonCityGuide.Views.MapPage">
     <StackLayout VerticalOptions="StartAndExpand" Padding="30">
         <maps:Map x:Name="MyMap"
-                  WidthRequest="320"
-                  HeightRequest="200"                  
+                  WidthRequest="960"
+                  HeightRequest="100"                  
                   IsShowingUser="true"
-                  MapType="Hybrid" />
+                  MapType="Street" />
     </StackLayout>
 </ContentPage>

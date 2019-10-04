@@ -17,4 +17,8 @@
   <ItemGroup>
     <EmbeddedResource Remove="Views\JunkPage.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\TEST.xaml.cs" />
+    <Compile Remove="Views\MapPage copy.cs" />
+  </ItemGroup>
 </Project>
