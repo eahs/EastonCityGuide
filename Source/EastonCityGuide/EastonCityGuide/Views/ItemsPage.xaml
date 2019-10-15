@@ -19,7 +19,7 @@
                     <x:String>Third Item</x:String>
                     <x:String>Forth Item</x:String>
                     <x:String>Fifth Item</x:String>
-                    <x:String>Sixth Item</x:String>
+                    <x:String>Seventh Item</x:String>
                 </x:Array>
             </d:ListView.ItemsSource>
             <ListView.ItemTemplate>
@@ -27,7 +27,7 @@
                     <ViewCell>
                         <StackLayout Padding="10">
                             <Label Text="{Binding Text}" d:Text="{Binding .}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="16" />
-                            <Label Text="{Binding Description}" d:Text="Item description" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" />
+                            <Label Text="{Binding Description}" d:Text="Item Description" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
