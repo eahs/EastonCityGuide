@@ -6,6 +6,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Support.V4.App;
+using Android;
+using Android.Support.Design.Widget;
+using Android.Support.V4.Content;
 
 namespace EastonCityGuide.Droid
 {
@@ -27,9 +31,9 @@ namespace EastonCityGuide.Droid
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            //ActivityCompat.RequestPermissions(this, new String[] { Android.Manifest.Permission.AccessFineLocation }, 1);
+           
 
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

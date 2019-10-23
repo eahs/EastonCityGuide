@@ -16,9 +16,13 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\JunkPage.xaml" />
+    <EmbeddedResource Remove="Views\TEST.xaml" />
+    <EmbeddedResource Remove="Views\MyView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\TEST.xaml.cs" />
     <Compile Remove="Views\MapPage copy.cs" />
+    <Compile Remove="Views\TESTING.xaml.cs" />
+    <Compile Remove="Views\MyView.xaml.cs" />
   </ItemGroup>
 </Project>
