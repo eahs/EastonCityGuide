@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace EastonCityGuide.Views
 {
-    public partial class JunkPage : ContentPage
+    public partial class TEST : ContentPage
     {
-        public JunkPage()
+        public TEST()
         {
             InitializeComponent();
         }
