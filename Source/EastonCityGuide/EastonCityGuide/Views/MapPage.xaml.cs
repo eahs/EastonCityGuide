@@ -11,6 +11,25 @@ namespace EastonCityGuide.Views
 {
     public partial class MapPage : ContentPage
     {
+        void Pins(int lat, int lon, string name, string desc)
+        {
+
+            var thing = new Pin
+            {
+                Type = PinType.Place,
+                Position = new Position(lat, lon),
+                Label = name,
+                Address = desc
+            };
+        }
+        void Clickable(Pin pin,string name, string desc)
+            {
+                pin.Clicked += (sender, e) =>
+                {
+                    DisplayAlert(name,desc, "Close");
+                };
+            }
+
         readonly Map map;
         public MapPage()
         {
@@ -59,6 +78,11 @@ namespace EastonCityGuide.Views
             };
             map.Pins.Add(pin1);
             map.Pins.Add(pin2);
+
+            pin2.Clicked += (sender, e) =>
+            {
+                var page1 = new Page();
+            };
 
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
