@@ -37,7 +37,7 @@
             <Image Aspect="AspectFill"
                    Source="xamarinstore.jpg"
                    Opacity="0.6" />
-            <Label Text="Animals"
+            <Label Text="Easton City Guide"
                    TextColor="White"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
@@ -46,20 +46,29 @@
     </DataTemplate>
 </Shell.FlyoutHeaderTemplate>
 
-<FlyoutItem Title="Cats"
+<FlyoutItem Title="Map"
                 Icon="cat.png">
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent Title="Map" ContentTemplate="{DataTemplate local:MapPage}" />
-            <ShellContent Title="Option2" ContentTemplate="{DataTemplate local:ItemsPage}" />
+            <!--<ShellContent Title="Option2" ContentTemplate="{DataTemplate local:ItemsPage}" />
             <ShellContent Title="Option3" ContentTemplate="{DataTemplate local:ItemsPage}" />
-            <ShellContent Title="Option4" ContentTemplate="{DataTemplate local:ItemsPage}" />
+            <ShellContent Title="Option4" ContentTemplate="{DataTemplate local:ItemsPage}" />-->
 
         </Tab>
         <Tab Title="About" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Dogs"
+    <FlyoutItem Title="Calendar"
+                Icon="dog.png">
+        <Tab Title="Browse" Icon="tab_feed.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+        </Tab>
+        <Tab Title="About" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Settings"
                 Icon="dog.png">
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
