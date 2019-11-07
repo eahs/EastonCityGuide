@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EastonCityGuide.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -51,84 +52,24 @@ namespace EastonCityGuide.Views
                 map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
             };
 
-            
-            var pin1 = new Pin
+
+
+            var test = new Pin
             {
-                Type = PinType.Place,
-                Position = new Position(40.691216, -75.209130),
-                Label = "Center Square",
-                Address = "Historical Location"
+
             };
-            var pin2 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.691389, -75.2125),
-                Label = "State Theater",
-                Address = "Entertainment"
-            };
-            var pin3 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.691944, -75.213611),
-                Label = "Easton Public Library",
-                Address = "Educational Location"
-            };
-            var pin4 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.687306, -75.217623),
-                Label = "NorthHampton County Court House",
-                Address = "Historical Location"
-            };
-            var pin5 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.691281, -75.210421),
-                Label = "Easton Public Market",
-                Address = "Consumer"
-            };
-            var pin6 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.690848, -75.210674),
-                Label = "Sigal Museum",
-                Address = "Educational Location"
-            };
-            var pin7 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.694538, -75.203715),
-                Label = "Easton-Pburg Bridge",
-                Address = "Historical Location"
-            };
-            var pin8 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.692109, -75.205205),
-                Label = "Christopher Columbus Statue",
-                Address = "Historical Location"
-            };
-            var pin9 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.690585, -75.213675),
-                Label = "Nurture Nature Center",
-                Address = "Educational Location"
-            };
-            var pin10 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.692191, -75.205048),
-                Label = "RiverSide Park",
-                Address = "Recreation"
-            };
-            var pin11 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(40.689864, -75.205397),
-                Label = "Larry Holmes Statue",
-                Address = "Historical Location"
-            };
+
+            var pin1 = new GuidePin(new Position(40.691216, -75.209130), "Center Square", "Historical Location");
+            var pin2 = new GuidePin(new Position(40.691389, -75.2125), "State Theater", "Entertainment");
+            var pin3 = new GuidePin(new Position(40.691944, -75.213611), "Easton Public Library", "Educational Facility");
+            var pin4 = new GuidePin(new Position(40.687306, -75.217623), "NorthHampton County Court House", "Historical Location");
+            var pin5 = new GuidePin(new Position(40.691281, -75.210421), "Easton Public Market", "Consumer");
+            var pin6 = new GuidePin(new Position(40.690848, -75.210674), "Sigal Museum", "Educational Location");
+            var pin7 = new GuidePin(new Position(40.694538, -75.203715), "Easton-Pburg Bridge", "Historical Location");
+            var pin8 = new GuidePin(new Position(40.692109, -75.205205), "Christopher Columbus Statue", "Historical Location");
+            var pin9 = new GuidePin(new Position(40.690585, -75.213675), "Nurture Nature Center", "Educational LOcation");
+            var pin10 = new GuidePin(new Position(40.692191, -75.205048), "RiverSide Park", "Recreation");
+            var pin11 = new GuidePin(new Position(40.689864, -75.205397), "Larry Holmes Statue", "Historical Location");
 
             Clickable(pin1, "Center Square", "The Centre Square was established in 1752 by Thomas and John Penn, the sons of William Penn. Many significant historical events occurred here including the public reading of the Declaration of Independence on July 8th, 1776.");
             Clickable(pin2, "State Theater", "");
