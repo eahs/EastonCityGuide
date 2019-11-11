@@ -68,6 +68,9 @@
     <PackageReference Include="Xamarin.Forms.Maps">
       <Version>4.2.0.815419</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer">
+      <Version>1.3.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -99,10 +102,6 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
-    <AndroidResource Include="Resources\Source\CenterSquare.jpg">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -116,6 +115,10 @@
       <Project>{1F1B7658-C02D-47D1-BD0F-DEA69C27A54E}</Project>
       <Name>EastonCityGuide</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Bruh.mp3" />
+    <AndroidAsset Include="Assets\Rick.mp3" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
