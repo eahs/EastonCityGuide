@@ -11,7 +11,5 @@
                   HeightRequest="100"
                   IsVisible="True"
                   MapType="Street" />
-        <SearchBar TextChanged="OnTextChanged" />
-        <ListView x:Name="searchResults" />
     </StackLayout>
 </ContentPage>
