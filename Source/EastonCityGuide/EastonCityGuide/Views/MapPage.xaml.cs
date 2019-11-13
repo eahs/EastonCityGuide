@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using EastonCityGuide.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using EastonCityGuide.Services;
 
 namespace EastonCityGuide.Views
 {
@@ -92,7 +93,7 @@ namespace EastonCityGuide.Views
             map.Pins.Add(pin9 );
             map.Pins.Add(pin10);
 
-            SearchBar searchbar = new SearchBar
+            SearchBar searchBar = new SearchBar
             {
                 Placeholder = "Search Items...",
                 PlaceholderColor = Color.Gray,
@@ -102,10 +103,24 @@ namespace EastonCityGuide.Views
                 FontAttributes = FontAttributes.None
             };
 
+            ListView searchResults = new ListView
+            {
+                HorizontalOptions = LayoutOptions.Fill,
+                VerticalOptions = LayoutOptions.Fill
+            };
+
+            void OnTextChanged(object sender, EventArgs e)
+            {
+                SearchBar searchBar = (SearchBar)sender;
+                searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+            }
+
+            searchBar.TextChanged += OnTextChanged;
+
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
             stack.Children.Add(slider);
-            stack.Children.Add(searchbar);
+            stack.Children.Add(searchBar);
             Content = stack;
         }
 
