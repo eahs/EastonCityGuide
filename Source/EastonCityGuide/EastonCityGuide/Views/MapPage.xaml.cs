@@ -7,15 +7,18 @@ using System.Threading.Tasks;
 using EastonCityGuide.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using EastonCityGuide.Services;
 
 namespace EastonCityGuide.Views
 {
     public partial class MapPage : ContentPage
     {
+        
 
         readonly Map map;
         public MapPage()
         {
+
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
 
             void Clickable(Pin pin, string name, string desc)
@@ -92,7 +95,7 @@ namespace EastonCityGuide.Views
             map.Pins.Add(pin9 );
             map.Pins.Add(pin10);
 
-            SearchBar searchbar = new SearchBar
+            SearchBar searchBar = new SearchBar
             {
                 Placeholder = "Search Items...",
                 PlaceholderColor = Color.Gray,
@@ -102,10 +105,31 @@ namespace EastonCityGuide.Views
                 FontAttributes = FontAttributes.None
             };
 
+            ListView searchResults = new ListView
+            {
+                HorizontalOptions = LayoutOptions.Fill,
+                VerticalOptions = LayoutOptions.Fill
+            };
+
+            void OnTextChanged(object sender, EventArgs e)
+            {
+                searchBar = (SearchBar)sender;
+                searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+            }
+            void OnSearchButtonPressed(object sender, EventArgs e)
+            {
+                SearchBar bar = (SearchBar)sender;
+                searchResults.ItemsSource = DataService.GetSearchResults(bar.Text);
+            }
+
+            searchBar.TextChanged += OnTextChanged;
+            searchBar.SearchButtonPressed += OnSearchButtonPressed;
+            searchResults.ItemsSource = DataService.Places;
+
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
             stack.Children.Add(slider);
-            stack.Children.Add(searchbar);
+            stack.Children.Add(searchBar);
             Content = stack;
         }
 
