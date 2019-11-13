@@ -113,6 +113,7 @@ namespace EastonCityGuide.Views
 
             void OnTextChanged(object sender, EventArgs e)
             {
+<<<<<<< HEAD
                 searchBar = (SearchBar)sender;
                 searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
             }
@@ -125,6 +126,13 @@ namespace EastonCityGuide.Views
             searchBar.TextChanged += OnTextChanged;
             searchBar.SearchButtonPressed += OnSearchButtonPressed;
             searchResults.ItemsSource = DataService.Places;
+=======
+                SearchBar searchBar = (SearchBar)sender;
+                searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+            }
+
+            searchBar.TextChanged += OnTextChanged;
+>>>>>>> SearchBar
 
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(map);
