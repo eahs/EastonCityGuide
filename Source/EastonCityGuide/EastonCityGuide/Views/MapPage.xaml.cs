@@ -122,6 +122,11 @@ namespace EastonCityGuide.Views
             {
                 searchBar = (SearchBar)sender;
                 searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+                if (searchBar.Text.Equals("Christopher") || searchBar.Text.Equals("Christopher Columbus") || searchBar.Text.Equals("Christopher Columbus Statue"))
+                {
+                    map.MoveToRegion(new MapSpan(new Position(40.692109, -75.205205), 0.001, 0.001));
+                }
+                else DisplayAlert("Error","Location Not Available","Close");
             }
             
             searchBar.TextChanged += OnTextChanged;
