@@ -25,6 +25,7 @@
     <Compile Remove="Views\MapPage copy.cs" />
     <Compile Remove="Views\TESTING.xaml.cs" />
     <Compile Remove="Views\MyView.xaml.cs" />
+    <Compile Remove="Models\Note.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Source\" />
