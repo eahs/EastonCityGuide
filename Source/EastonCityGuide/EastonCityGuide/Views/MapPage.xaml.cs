@@ -125,7 +125,7 @@ namespace EastonCityGuide.Views
 
                 for (int i = 0; i < places.Count; i++)
                 {
-                    if (searchBar.Text.Equals(places[i]))
+                    if (searchBar.Text.ToLower().Equals(places[i].ToLower()))
                     {
                         map.MoveToRegion(new MapSpan(locations[i], 0.001, 0.001));
                     }
