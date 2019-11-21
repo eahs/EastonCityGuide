@@ -32,6 +32,8 @@ namespace EastonCityGuide.Views
                 };
             }
 
+            
+
             var map = new Map(
                 MapSpan.FromCenterAndRadius(
                         new Position(40, -75), Distance.FromMiles(0.3)))
@@ -107,6 +109,13 @@ namespace EastonCityGuide.Views
                 FontAttributes = FontAttributes.None
             };
 
+            Button button = new Button
+            {
+                Text = "TEST",
+                VerticalOptions = LayoutOptions.Start,
+                HorizontalOptions = LayoutOptions.Fill,
+            };
+
             ListView searchResults = new ListView
             {
                 HorizontalOptions = LayoutOptions.Fill,
@@ -143,14 +152,15 @@ namespace EastonCityGuide.Views
             searchResults.ItemsSource = DataService.Places;
 
             searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
-            
+
 
             searchBar.TextChanged += OnTextChanged;
 
             var stack = new StackLayout { Spacing = 0 };
-            stack.Children.Add(map);
-            stack.Children.Add(slider);
             stack.Children.Add(searchBar);
+            stack.Children.Add(map);
+            stack.Children.Add(button);
+            stack.Children.Add(slider);
             Content = stack;
         }
 

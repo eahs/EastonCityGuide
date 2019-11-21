@@ -11,5 +11,19 @@
                   HeightRequest="100"
                   IsVisible="True"
                   MapType="Street" />
+        <!--<Button
+            x:Name = "Route"
+            Text="TEST"
+            TextColor="Black"
+            HeightRequest="50"
+            WidthRequest="5"
+            IsVisible="True"
+            IsEnabled="True"
+            Margin="0,10,0,0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="OnButtonClicked"
+            />-->
     </StackLayout>
+    
 </ContentPage>

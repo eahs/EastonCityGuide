@@ -50,7 +50,6 @@ namespace EastonCityGuide.Services
 
            "State Theater",
            "Theater"
-
         };
 
         public static List<Position> Locations { get; } = new List<Position>
@@ -94,7 +93,6 @@ namespace EastonCityGuide.Services
 
             new Position(40.691389, -75.212500),
             new Position(40.691389, -75.212500)
-
         };
 
         public static List<string> GetSearchResults(string queryString)
