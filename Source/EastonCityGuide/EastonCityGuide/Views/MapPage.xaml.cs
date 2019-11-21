@@ -13,7 +13,8 @@ namespace EastonCityGuide.Views
 {
     public partial class MapPage : ContentPage
     {
-        
+        List<string> places = DataService.Places;
+        List<Position> locations = DataService.Locations;
 
         readonly Map map;
         public MapPage()
@@ -94,6 +95,7 @@ namespace EastonCityGuide.Views
             map.Pins.Add(pin8 );
             map.Pins.Add(pin9 );
             map.Pins.Add(pin10);
+            map.Pins.Add(pin11);
 
             SearchBar searchBar = new SearchBar
             {
@@ -111,8 +113,6 @@ namespace EastonCityGuide.Views
                 VerticalOptions = LayoutOptions.Fill
             };
 
-            
-
             void OnTextChanged(object sender, EventArgs e)
             {
                 searchBar = (SearchBar)sender;
@@ -122,6 +122,20 @@ namespace EastonCityGuide.Views
             {
                 searchBar = (SearchBar)sender;
                 searchResults.ItemsSource = DataService.GetSearchResults(searchBar.Text);
+
+                for (int i = 0; i < places.Count; i++)
+                {
+                    if (searchBar.Text.ToLower().Equals(places[i].ToLower()))
+                    {
+                        map.MoveToRegion(new MapSpan(locations[i], 0.001, 0.001));
+                    }
+                }
+
+                //if (searchBar.Text.Equals("Christopher") || searchBar.Text.Equals("Christopher Columbus") || searchBar.Text.Equals("Christopher Columbus Statue"))
+                //{
+                //    map.MoveToRegion(new MapSpan(new Position(40.692109, -75.205205), 0.001, 0.001));
+                //}
+                //else DisplayAlert("Error","Location Not Available","Close");
             }
             
             searchBar.TextChanged += OnTextChanged;
