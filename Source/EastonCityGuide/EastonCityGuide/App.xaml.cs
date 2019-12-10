@@ -11,6 +11,8 @@ namespace EastonCityGuide
 
         public App()
         {
+            MainPage = new NavigationPage( new MapPage() );
+
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();

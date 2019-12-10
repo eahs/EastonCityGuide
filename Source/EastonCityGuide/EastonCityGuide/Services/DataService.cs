@@ -9,6 +9,20 @@ namespace EastonCityGuide.Services
 {
     public static class DataService
     {
+        public static List<string> Routing { get; } = new List<string>
+        {
+            "Center Square",
+            "Christopher Columbus Statue",
+            "Easton-PBurg Bridge",
+            "Easton Public Library",
+            "Easton Public Market",
+            "Larry Holmes Statue",
+            "NorthHampton County Court House",
+            "Nurture Nature Center",
+            "RiverSide Park",
+            "Sigal Museum",
+            "State Theater",
+        };
         public static List<string> Places { get; } = new List<string>
         {
            "Center Square",

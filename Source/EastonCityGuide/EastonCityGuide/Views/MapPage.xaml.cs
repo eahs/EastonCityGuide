@@ -13,8 +13,11 @@ namespace EastonCityGuide.Views
 {
     public partial class MapPage : ContentPage
     {
+        
+
         List<string> places = DataService.Places;
         List<Position> locations = DataService.Locations;
+
 
         readonly Map map;
         public MapPage()
@@ -111,10 +114,19 @@ namespace EastonCityGuide.Views
 
             Button button = new Button
             {
-                Text = "TEST",
+                Text = "Routing",
                 VerticalOptions = LayoutOptions.Start,
                 HorizontalOptions = LayoutOptions.Fill,
+                BackgroundColor = Color.OrangeRed,
+                FontAttributes = FontAttributes.Bold,
+                FontSize = 18,
             };
+            
+            button.Clicked += (sender, args) =>
+             {
+                 button = (Button)sender;
+                 Navigation.PushAsync(new RoutingPage());
+             };
 
             ListView searchResults = new ListView
             {
@@ -146,6 +158,8 @@ namespace EastonCityGuide.Views
                 //}
                 //else DisplayAlert("Error","Location Not Available","Close");
             }
+
+            
             
             searchBar.TextChanged += OnTextChanged;
             searchBar.SearchButtonPressed += OnSearchButtonPressed;
