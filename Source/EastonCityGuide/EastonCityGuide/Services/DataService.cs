@@ -23,6 +23,20 @@ namespace EastonCityGuide.Services
             "Sigal Museum",
             "State Theater",
         };
+        public static List<Position> Coordinates { get; } = new List<Position>
+        {
+            new Position(40.691216, -75.209130),
+            new Position(40.692109, -75.205205),
+            new Position(40.694538, -75.203715),
+            new Position(40.691944, -75.213611),
+            new Position(40.691281, -75.210421),
+            new Position(40.689864, -75.205397),
+            new Position(40.687306, -75.217623),
+            new Position(40.690585, -75.213675),
+            new Position(40.692191, -75.205048),
+            new Position(40.690848, -75.210674),
+            new Position(40.691389, -75.212500),
+        };
         public static List<string> Places { get; } = new List<string>
         {
            "Center Square",

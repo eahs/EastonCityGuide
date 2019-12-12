@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace EastonCityGuide.Views
 {
@@ -9,8 +10,10 @@ namespace EastonCityGuide.Views
     {
         public RoutingPage()
         {
-            object location1;
-            object location2;
+            object Option1;
+            object Option2;
+            Position location1;
+            Position location2;
 
             async void RouteButtonClicked(object sender, EventArgs e)
             {
@@ -32,8 +35,15 @@ namespace EastonCityGuide.Views
                 Text = "Find Route"
             };
 
-            location1 = drop1.SelectedItem;
-            location2 = drop2.SelectedItem;
+            Option1 = drop1.SelectedItem;
+            Option2 = drop2.SelectedItem;
+            location1 = EastonCityGuide.Services.DataService.Coordinates[1];
+            location2 = EastonCityGuide.Services.DataService.Coordinates[1];
+
+            button.Clicked += (sender, args) =>
+            {
+                DisplayAlert("Test","TEST","Close");
+            };
 
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(drop1);
