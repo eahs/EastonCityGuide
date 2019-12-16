@@ -147,4 +147,7 @@
       <Name>EastonCityGuide</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Testing.jpg" />
+  </ItemGroup>
 </Project>

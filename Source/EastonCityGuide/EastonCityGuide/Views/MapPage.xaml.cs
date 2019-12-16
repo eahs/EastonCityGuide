@@ -78,8 +78,18 @@ namespace EastonCityGuide.Views
             var pin10 = new GuidePin(new Position(40.692191, -75.205048), "RiverSide Park", "Recreation");
             var pin11 = new GuidePin(new Position(40.689864, -75.205397), "Larry Holmes Statue", "Historical Location");
 
-            Clickable(pin1,  "Center Square", "The Centre Square was established in 1752 by Thomas and John Penn, the sons of William Penn. Many significant historical events occurred here including the public reading of the Declaration of Independence on July 8th, 1776.");
-            Clickable(pin2,  "State Theater", "");
+            //Clickable(pin1,  "Center Square", "The Centre Square was established in 1752 by Thomas and John Penn, the sons of William Penn. Many significant historical events occurred here including the public reading of the Declaration of Independence on July 8th, 1776.");
+            pin1.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.CenterSquare());
+            };
+
+            pin2.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.StateTheatre());
+            };
+
+            //Clickable(pin2,  "State Theatre", "");
             Clickable(pin3,  "Easton Public Library", "The Easton Library Company started off as a subscription based book borrowing system in 1811. After seeing a need to reorganize the system, citizens applied for Andrew Carnegie’s library grant and secured $50,000 to construct a new library. The building was finished in 1903 and later expanded in 1911 and 1941.");
             Clickable(pin4,  "NorthHampton County Court House", "");
             Clickable(pin5,  "Easton Public Market", "The Easton Public Market is a weekly opportunity for both vendors and customers to enjoy the great city of Easton. During the summer it takes place at the center square, but during the colder months it takes place inside, as to not make it too much of a hassle on people. This is also the location of many events within Easton such as GarlicFest, BaconFest, and Oktoberfest.");

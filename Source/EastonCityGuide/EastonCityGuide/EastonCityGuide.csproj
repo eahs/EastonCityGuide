@@ -19,6 +19,8 @@
     <EmbeddedResource Remove="Views\JunkPage.xaml" />
     <EmbeddedResource Remove="Views\TEST.xaml" />
     <EmbeddedResource Remove="Views\MyView.xaml" />
+    <EmbeddedResource Remove="Views\MyPage.xaml" />
+    <EmbeddedResource Remove="Views\PinPages\MyPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\TEST.xaml.cs" />
@@ -29,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Source\" />
+    <Folder Include="Views\PinPages\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Source\Bruh.mp3" />
