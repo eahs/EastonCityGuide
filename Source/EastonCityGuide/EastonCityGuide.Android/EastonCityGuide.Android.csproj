@@ -102,7 +102,7 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
     <AndroidResource Include="Resources\drawable\tab_about.png" />
     <AndroidResource Include="Resources\drawable\tab_feed.png" />
-    <AndroidResource Include="Resources\drawable\Testing.jpg">
+    <AndroidResource Include="Resources\drawable\Rover.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
