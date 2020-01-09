@@ -28,12 +28,14 @@ namespace EastonCityGuide.Views.PinPages
 
             Image photo = new Image
             {
-                Source = "Testing.jpg",
+                Source = "StateTheatre.jpg",
+                Aspect = Aspect.AspectFit,
             };
 
             Label info = new Label
             {
-                Text = "TEMP",
+                Text = "Originally the Northampton National Bank, the State Theatre went through many renovations and was a major entertainment hub. Today, it is used as " +
+                       "a show venue and hosts the annual Freddy Awards.",
             };
 
             var stack = new StackLayout { Spacing = 0 };

@@ -28,12 +28,15 @@ namespace EastonCityGuide.Views.PinPages
 
             Image photo = new Image
             {
-                Source = "Testing.jpg",
+                Source = "CenterSquare.jpg",
+                Aspect = Aspect.AspectFit,
             };
 
             Label info = new Label
             {
-                Text = "TEMP",
+                Text = "The Centre Square was established in 1752 by Thomas and John Penn, the sons of William Penn. " +
+                       "Many significant historical events occurred here including the public reading of the Declaration " +
+                       "of Independence on July 8th, 1776.",
             };
 
             var stack = new StackLayout { Spacing = 0 };

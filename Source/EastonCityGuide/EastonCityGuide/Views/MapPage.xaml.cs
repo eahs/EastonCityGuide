@@ -89,16 +89,61 @@ namespace EastonCityGuide.Views
                 Navigation.PushAsync(new PinPages.StateTheatre());
             };
 
+            pin3.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.PublicLibrary());
+            };
+
+            pin4.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.CourtHouse());
+            };
+
+            pin5.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.PublicMarket());
+            };
+
+            pin6.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.SigalMuseum());
+            };
+
+            pin7.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.EPBridge());
+            };
+
+            pin8.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.Columbus());
+            };
+
+            pin9.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.NurtureNature());
+            };
+
+            pin10.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.RiverSide());
+            };
+
+            pin11.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.LarryHolmes());
+            };
+
             //Clickable(pin2,  "State Theatre", "");
-            Clickable(pin3,  "Easton Public Library", "The Easton Library Company started off as a subscription based book borrowing system in 1811. After seeing a need to reorganize the system, citizens applied for Andrew Carnegie’s library grant and secured $50,000 to construct a new library. The building was finished in 1903 and later expanded in 1911 and 1941.");
-            Clickable(pin4,  "NorthHampton County Court House", "");
-            Clickable(pin5,  "Easton Public Market", "The Easton Public Market is a weekly opportunity for both vendors and customers to enjoy the great city of Easton. During the summer it takes place at the center square, but during the colder months it takes place inside, as to not make it too much of a hassle on people. This is also the location of many events within Easton such as GarlicFest, BaconFest, and Oktoberfest.");
-            Clickable(pin6,  "Sigal Museum", "The Sigal museum is an educational facility carrying hundreds of artifacts from throughout history. They carry all sorts of Native American artifacts, ancient weapons and living quarters, as well as even animal skeletons for viewing. The museum also holds a large gallery that rotates different selections of shows and exhibits.");
-            Clickable(pin7,  "Easton-Pburg Bridge", "");
-            Clickable(pin8,  "Christopher Columbus Statue", "Within September of 1928, a group of Italian Immigrants came together and funded the building of a 9-foot statue of explorer Christopher Columbus. The statue’s construction was halted after attacks from the KKK. Despite these attacks, the Italiant immigrants wanted a symbol of their country, and they chose Columbus. The statue was finally constructed in December of 1930.");
-            Clickable(pin9,  "Nurture Nature Center", "The Nurture Nature Center is an Educational location within the city of easton. The Nurture Nature Center is home to the Science on a Sphere, an educational device that projects scientific data onto a giant hanging sphere. This is the only one of its kind in Pennsylvania and one of only ~20 in the entire country of the United States. The location is also home to an art gallery, and telescopes available to look up into the night sky.");
-            Clickable(pin10, "RiverSide Park", "Located within a short walk North of Scott Park, Riverside park hosts a 586 seat amphitheatre, a large playground for children, and areas for recreation. Facilities may be rented out.");
-            Clickable(pin11, "Larry Holmes Statue", "Larry Holmes was a champion heavyweight boxer who was born in Easton, PA. He was inducted into the International Boxing Hall of Fame.");
+            //Clickable(pin3,  "Easton Public Library", "The Easton Library Company started off as a subscription based book borrowing system in 1811. After seeing a need to reorganize the system, citizens applied for Andrew Carnegie’s library grant and secured $50,000 to construct a new library. The building was finished in 1903 and later expanded in 1911 and 1941.");
+            //Clickable(pin4,  "NorthHampton County Court House", "");
+            //Clickable(pin5,  "Easton Public Market", "The Easton Public Market is a weekly opportunity for both vendors and customers to enjoy the great city of Easton. During the summer it takes place at the center square, but during the colder months it takes place inside, as to not make it too much of a hassle on people. This is also the location of many events within Easton such as GarlicFest, BaconFest, and Oktoberfest.");
+            //Clickable(pin6,  "Sigal Museum", "The Sigal museum is an educational facility carrying hundreds of artifacts from throughout history. They carry all sorts of Native American artifacts, ancient weapons and living quarters, as well as even animal skeletons for viewing. The museum also holds a large gallery that rotates different selections of shows and exhibits.");
+            //Clickable(pin7,  "Easton-Pburg Bridge", "");
+            //Clickable(pin8,  "Christopher Columbus Statue", "Within September of 1928, a group of Italian Immigrants came together and funded the building of a 9-foot statue of explorer Christopher Columbus. The statue’s construction was halted after attacks from the KKK. Despite these attacks, the Italiant immigrants wanted a symbol of their country, and they chose Columbus. The statue was finally constructed in December of 1930.");
+            //Clickable(pin9,  "Nurture Nature Center", "The Nurture Nature Center is an Educational location within the city of easton. The Nurture Nature Center is home to the Science on a Sphere, an educational device that projects scientific data onto a giant hanging sphere. This is the only one of its kind in Pennsylvania and one of only ~20 in the entire country of the United States. The location is also home to an art gallery, and telescopes available to look up into the night sky.");
+            //Clickable(pin10, "RiverSide Park", "Located within a short walk North of Scott Park, Riverside park hosts a 586 seat amphitheatre, a large playground for children, and areas for recreation. Facilities may be rented out.");
+            //Clickable(pin11, "Larry Holmes Statue", "Larry Holmes was a champion heavyweight boxer who was born in Easton, PA. He was inducted into the International Boxing Hall of Fame.");
 
             map.Pins.Add(pin1 );
             map.Pins.Add(pin2 );

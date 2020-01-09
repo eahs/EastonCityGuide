@@ -150,4 +150,37 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Testing.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CenterSquare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Columbus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CourtHouse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\EPBridge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LarryHolmes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NurtureNature.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PublicLibrary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PublicMarket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\RiverSide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SigalMuseum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\StateTheatre.jpg" />
+  </ItemGroup>
 </Project>
