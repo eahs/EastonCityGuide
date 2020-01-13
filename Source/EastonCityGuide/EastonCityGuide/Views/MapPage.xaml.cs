@@ -63,9 +63,15 @@ namespace EastonCityGuide.Views
             var pin6  = new GuidePin(new Position(40.690848, -75.210674), "Sigal Museum", "Educational Location");
             var pin7  = new GuidePin(new Position(40.694538, -75.203715), "Easton-Pburg Bridge", "Historical Location");
             var pin8  = new GuidePin(new Position(40.692109, -75.205205), "Christopher Columbus Statue", "Historical Location");
-            var pin9  = new GuidePin(new Position(40.690585, -75.213675), "Nurture Nature Center", "Educational LOcation");
+            var pin9  = new GuidePin(new Position(40.690585, -75.213675), "Nurture Nature Center", "Educational Facility");
             var pin10 = new GuidePin(new Position(40.692191, -75.205048), "RiverSide Park", "Recreation");
             var pin11 = new GuidePin(new Position(40.689864, -75.205397), "Larry Holmes Statue", "Historical Location");
+            var pin12 = new GuidePin(new Position(40.682571, -75.252674), "Easton Area High School", "Educational Facility");
+            var pin13 = new GuidePin(new Position(40.682574, -75.250029), "Vietnam Memorial", "Historical Location");
+            var pin14 = new GuidePin(new Position(40.696192, -75.228143), "Karl Stirner Arts Trail", "Entertainment");
+            var pin15 = new GuidePin(new Position(40.691737, -75.225713), "Cottingham Stadium", "Historical Location");
+            var pin16 = new GuidePin(new Position(40.690811, -75.227308), "Paxinosa Elementary School", "Educational Facility");
+            var pin17 = new GuidePin(new Position(40.684204, -75.243630), "Wilson Area High School", "Educational Facility");
 
             //Clickable(pin1,  "Center Square", "The Centre Square was established in 1752 by Thomas and John Penn, the sons of William Penn. Many significant historical events occurred here including the public reading of the Declaration of Independence on July 8th, 1776.");
             pin1.Clicked += (sender, e) =>
@@ -123,6 +129,36 @@ namespace EastonCityGuide.Views
                 Navigation.PushAsync(new PinPages.LarryHolmes());
             };
 
+            pin12.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.EastonAreaHighSchool());
+            };
+
+            pin13.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.VietnamMemorial());
+            };
+
+            pin14.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.ArtsTrail());
+            };
+
+            pin15.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.Cottingham());
+            };
+
+            pin16.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.Paxinosa());
+            };
+
+            pin17.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new PinPages.WilsonAreaHighSchool());
+            };
+
             //Clickable(pin2,  "State Theatre", "");
             //Clickable(pin3,  "Easton Public Library", "The Easton Library Company started off as a subscription based book borrowing system in 1811. After seeing a need to reorganize the system, citizens applied for Andrew Carnegie’s library grant and secured $50,000 to construct a new library. The building was finished in 1903 and later expanded in 1911 and 1941.");
             //Clickable(pin4,  "NorthHampton County Court House", "");
@@ -145,6 +181,12 @@ namespace EastonCityGuide.Views
             map.Pins.Add(pin9 );
             map.Pins.Add(pin10);
             map.Pins.Add(pin11);
+            map.Pins.Add(pin12);
+            map.Pins.Add(pin13);
+            map.Pins.Add(pin14);
+            map.Pins.Add(pin15);
+            map.Pins.Add(pin16);
+            map.Pins.Add(pin17);
 
             SearchBar searchBar = new SearchBar
             {
