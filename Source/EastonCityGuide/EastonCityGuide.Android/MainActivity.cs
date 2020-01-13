@@ -10,6 +10,8 @@ using Android.Support.V4.App;
 using Android;
 using Android.Support.Design.Widget;
 using Android.Support.V4.Content;
+using Xamarin.Forms;
+
 
 namespace EastonCityGuide.Droid
 {

@@ -13,7 +13,6 @@ namespace EastonCityGuide.Views
 {
     public partial class MapPage : ContentPage
     {
-        
 
         List<string> places = DataService.Places;
         List<Position> locations = DataService.Locations;
@@ -24,16 +23,6 @@ namespace EastonCityGuide.Views
         {
 
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-
-            void Clickable(Pin pin, string name, string desc)
-            {
-                pin.Clicked += (sender, e) =>
-                {
-                    player.Load("Rick.mp3");
-                    player.Play();
-                    DisplayAlert(name, desc, "Close");
-                };
-            }
 
             
 
@@ -231,6 +220,7 @@ namespace EastonCityGuide.Views
             stack.Children.Add(button);
             stack.Children.Add(slider);
             Content = stack;
+
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using EastonCityGuide.Models;
 
 using Xamarin.Forms;
 
@@ -44,6 +45,8 @@ namespace EastonCityGuide.Views.PinPages
             stack.Children.Add(photo);
             stack.Children.Add(info);
             Content = stack;
+
+            
         }
     }
 }
