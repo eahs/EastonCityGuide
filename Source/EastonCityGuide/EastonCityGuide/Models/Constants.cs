@@ -11,8 +11,8 @@ namespace EastonCityGuide.Models
     {
         public static bool IsDev = true;
 
-        public static Color BackgroundColor = Xamarin.Forms.Color.White;
-        public static Color MainTextColor = Xamarin.Forms.Color.White;
+        public static Color BackgroundColor = Xamarin.Forms.Color.DarkGray;
+        public static Color MainTextColor = Xamarin.Forms.Color.Black;
 
 
 
