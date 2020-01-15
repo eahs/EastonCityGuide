@@ -11,7 +11,7 @@ namespace EastonCityGuide.ViewModels
         {
             Title = "About";
 
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://www.seriouseats.com/2012/03/weirdest-ramen-strangest-funniest-gross-packaged-noodles.html")));
+            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://www.easton-pa.com/")));
         }
 
         public ICommand OpenWebCommand { get; }

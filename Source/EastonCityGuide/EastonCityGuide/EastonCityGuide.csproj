@@ -28,6 +28,8 @@
     <Compile Remove="Views\TESTING.xaml.cs" />
     <Compile Remove="Views\MyView.xaml.cs" />
     <Compile Remove="Models\Note.cs" />
+    <Compile Remove="Views\MyPage.cs" />
+    <Compile Remove="Views\SettingsPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Source\" />

@@ -46,21 +46,17 @@
     </DataTemplate>
 </Shell.FlyoutHeaderTemplate>
 
-<FlyoutItem Title="Map"
-                Icon="cat.png">
+<FlyoutItem Title="Map">
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent Title="Map" ContentTemplate="{DataTemplate local:MapPage}" />
-            <!--<ShellContent Title="Option2" ContentTemplate="{DataTemplate local:ItemsPage}" />
-            <ShellContent Title="Option3" ContentTemplate="{DataTemplate local:ItemsPage}" />
-            <ShellContent Title="Option4" ContentTemplate="{DataTemplate local:ItemsPage}" />-->
 
         </Tab>
         <Tab Title="About" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Calendar"
-                Icon="dog.png">
+    <!--> <-->
+    <FlyoutItem Title="Calendar">
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
         </Tab>
@@ -68,44 +64,13 @@
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Settings"
-                Icon="dog.png">
+    <FlyoutItem Title="Settings">
         <Tab Title="Browse" Icon="tab_feed.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+            <ShellContent ContentTemplate="{DataTemplate local:Settings}" />
         </Tab>
         <Tab Title="About" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
     </FlyoutItem>
 
-
-    <!-- Optional Templates 
-    // These may be provided inline as below or as separate classes.
-
-    // This header appears at the top of the Flyout.
-    <Shell.FlyoutHeaderTemplate>
-	<DataTemplate>
-            <Grid>ContentHere</Grid>
-        </DataTemplate>
-    </Shell.FlyoutHeaderTemplate>
-
-    // ItemTemplate is for ShellItems as displayed in a Flyout
-    <Shell.ItemTemplate>
-        <DataTemplate>
-            <ContentView>
-                Bindable Properties: Title, Icon
-            </ContentView>
-        </DataTemplate>
-    </Shell.ItemTemplate>
-
-    // MenuItemTemplate is for MenuItems as displayed in a Flyout
-    <Shell.MenuItemTemplate>
-        <DataTemplate>
-            <ContentView>
-                Bindable Properties: Text, Icon
-            </ContentView>
-        </DataTemplate>
-    </Shell.MenuItemTemplate>
-
-    -->
 </Shell>
