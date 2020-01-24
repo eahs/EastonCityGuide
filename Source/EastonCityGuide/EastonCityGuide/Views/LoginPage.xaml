@@ -9,7 +9,7 @@
     </StackLayout>
 
     <StackLayout x:Name="NameStack" VerticalOptions="FillAndExpand">
-        <Label x:Name="AppName" Text="Easton City Guide" FontSize="30" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" TextColor="Black"/>
+        <Label x:Name="AppName" Text="Easton City Guide" FontSize="30" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" TextColor="Black"/>
     </StackLayout>
 
     <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
