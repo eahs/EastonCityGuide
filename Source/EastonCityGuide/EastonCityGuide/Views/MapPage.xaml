@@ -10,7 +10,7 @@
                   WidthRequest="960"
                   HeightRequest="100"
                   IsVisible="True"
-                  MapType="Street" />
+                  MapType="Street"/>
         <!--<Button
             x:Name = "Route"
             Text="TEST"
