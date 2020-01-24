@@ -25,4 +25,8 @@
     <Compile Remove="Views\TESTING.xaml.cs" />
     <Compile Remove="Views\MyView.xaml.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Xamarin\Forms\" />
+  </ItemGroup>
 </Project>
