@@ -14,7 +14,6 @@ namespace EastonCityGuide.Views.PinPages
     {
         public LarryHolmes()
         {
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
 
             async void ButtonClicked(object sender, EventArgs e)
             {
@@ -27,8 +26,7 @@ namespace EastonCityGuide.Views.PinPages
             };
             voice.Clicked += (sender, e) =>
             {
-                player.Load("Rick.mp3");
-                player.Play();
+                App.Music("LarryHolmes");
             };
 
             Image photo = new Image

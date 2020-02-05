@@ -10,7 +10,6 @@ namespace EastonCityGuide.Views.PinPages
     {
         public CenterSquare()
         {
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
 
             async void ButtonClicked(object sender, EventArgs e)
             {
@@ -23,8 +22,7 @@ namespace EastonCityGuide.Views.PinPages
             };
             voice.Clicked += (sender, e) =>
             {
-                player.Load("Rick.mp3");
-                player.Play();
+                App.Music("CenterSquare");
             };
 
             Image photo = new Image

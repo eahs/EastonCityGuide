@@ -11,8 +11,10 @@ using EastonCityGuide.Services;
 
 namespace EastonCityGuide.Views
 {
+
     public partial class MapPage : ContentPage
     {
+        protected override void OnAppearing() => App.Music("MainPage");
 
         List<string> places = DataService.Places;
         List<Position> locations = DataService.Locations;
@@ -22,8 +24,6 @@ namespace EastonCityGuide.Views
 
         public MapPage()
         {
-
-        var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
 
             var map = new Map(
                 MapSpan.FromCenterAndRadius(
@@ -54,59 +54,38 @@ namespace EastonCityGuide.Views
                 map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
             };
 
-            var pin1  = new GuidePin(new Position(40.691216, -75.209130), "Center Square", "Historical Location"                  );
-            var pin2  = new GuidePin(new Position(40.691389, -75.212500), "State Theater", "Entertainment"                        );
-            var pin3  = new GuidePin(new Position(40.691944, -75.213611), "Easton Public Library", "Educational Facility"         );
-            var pin4  = new GuidePin(new Position(40.687306, -75.217623), "NorthHampton County Court House", "Historical Location");
-            var pin5  = new GuidePin(new Position(40.691281, -75.210421), "Easton Public Market", "Consumer"                      );
-            var pin6  = new GuidePin(new Position(40.690848, -75.210674), "Sigal Museum", "Educational Location"                  );
-            var pin7  = new GuidePin(new Position(40.694538, -75.203715), "Easton-Pburg Bridge", "Historical Location"            );
-            var pin8  = new GuidePin(new Position(40.692109, -75.205205), "Christopher Columbus Statue", "Historical Location"    );
-            var pin9  = new GuidePin(new Position(40.690585, -75.213675), "Nurture Nature Center", "Educational Facility"         );
-            var pin10 = new GuidePin(new Position(40.692191, -75.205048), "RiverSide Park", "Recreation"                          );
-            var pin11 = new GuidePin(new Position(40.689864, -75.205397), "Larry Holmes Statue", "Historical Location"            );
-            var pin12 = new GuidePin(new Position(40.682571, -75.252674), "Easton Area High School", "Educational Facility"       );
-            var pin13 = new GuidePin(new Position(40.682574, -75.250029), "Vietnam Memorial", "Historical Location"               );
-            var pin14 = new GuidePin(new Position(40.696192, -75.228143), "Karl Stirner Arts Trail", "Entertainment"              );
-            var pin15 = new GuidePin(new Position(40.691737, -75.225713), "Cottingham Stadium", "Historical Location"             );
-            var pin16 = new GuidePin(new Position(40.690811, -75.227308), "Paxinosa Elementary School", "Educational Facility"    );
-            var pin17 = new GuidePin(new Position(40.684204, -75.243630), "Wilson Area High School", "Educational Facility"       );
+            List<GuidePin> pins = new List<GuidePin>();
 
-            pin1.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.CenterSquare        ());};
-            pin2.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.StateTheatre        ());};
-            pin3.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.PublicLibrary       ());};
-            pin4.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.CourtHouse          ());};
-            pin5.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.PublicMarket        ());};
-            pin6.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.SigalMuseum         ());};
-            pin7.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.EPBridge            ());};
-            pin8.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.Columbus            ());};
-            pin9.Clicked  += (sender, e) => {Navigation.PushAsync(new PinPages.NurtureNature       ());};
-            pin10.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.RiverSide           ());};
-            pin11.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.LarryHolmes         ());};
-            pin12.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.EastonAreaHighSchool());};
-            pin13.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.VietnamMemorial     ());};
-            pin14.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.ArtsTrail           ());};
-            pin15.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.Cottingham          ());};
-            pin16.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.Paxinosa            ());};
-            pin17.Clicked += (sender, e) => {Navigation.PushAsync(new PinPages.WilsonAreaHighSchool());};
+            pins.Add(new GuidePin { Position = new Position(40.691216, -75.209130), Label = "Center Square",                   Address = "Historical Location",  Type = PinType.Place, PinPageType = typeof(PinPages.CenterSquare)         });
+            pins.Add(new GuidePin { Position = new Position(40.691389, -75.212500), Label = "State Theater",                   Address = "Entertainment",        Type = PinType.Place, PinPageType = typeof(PinPages.StateTheatre)         });
+            pins.Add(new GuidePin { Position = new Position(40.691944, -75.213611), Label = "Easton Public Library",           Address = "Educational Facility", Type = PinType.Place, PinPageType = typeof(PinPages.PublicLibrary)        });
+            pins.Add(new GuidePin { Position = new Position(40.687306, -75.217623), Label = "NorthHampton County Court House", Address = "Historical Location",  Type = PinType.Place, PinPageType = typeof(PinPages.CourtHouse)           });
+            pins.Add(new GuidePin { Position = new Position(40.691281, -75.210421), Label = "Easton Public Market",            Address = "Recreation",           Type = PinType.Place, PinPageType = typeof(PinPages.PublicMarket)         });
+            pins.Add(new GuidePin { Position = new Position(40.690848, -75.210674), Label = "Sigal Museum",                    Address = "Educational Facility", Type = PinType.Place, PinPageType = typeof(PinPages.SigalMuseum)          });
+            pins.Add(new GuidePin { Position = new Position(40.694538, -75.203715), Label = "Easton-PBurg Bridge",             Address = "Historical Location",  Type = PinType.Place, PinPageType = typeof(PinPages.EPBridge)             });
+            pins.Add(new GuidePin { Position = new Position(40.692109, -75.205205), Label = "Christopher Columbus Statue",     Address = "Historical Location",  Type = PinType.Place, PinPageType = typeof(PinPages.Columbus)             });
+            pins.Add(new GuidePin { Position = new Position(40.690585, -75.213675), Label = "Nurture Nature Center",           Address = "Educational Dacility", Type = PinType.Place, PinPageType = typeof(PinPages.NurtureNature)        });
+            pins.Add(new GuidePin { Position = new Position(40.692191, -75.205048), Label = "RiverSide Park",                  Address = "Recreation",           Type = PinType.Place, PinPageType = typeof(PinPages.RiverSide)            });
+            pins.Add(new GuidePin { Position = new Position(40.689864, -75.205397), Label = "Larry Holmes Statue",             Address = "Historical Location",  Type = PinType.Place, PinPageType = typeof(PinPages.LarryHolmes)          });
+            pins.Add(new GuidePin { Position = new Position(40.682571, -75.252674), Label = "Easton Area High School",         Address = "Educational Facility", Type = PinType.Place, PinPageType = typeof(PinPages.EastonAreaHighSchool) });
+            pins.Add(new GuidePin { Position = new Position(40.682574, -75.250029), Label = "Vietnam Memorial",                Address = "Historical Location",  Type = PinType.Place, PinPageType = typeof(PinPages.VietnamMemorial)      });
+            pins.Add(new GuidePin { Position = new Position(40.696192, -75.228143), Label = "Karl Stirner Arts Trail",         Address = "Entertainment",        Type = PinType.Place, PinPageType = typeof(PinPages.ArtsTrail)            });
+            pins.Add(new GuidePin { Position = new Position(40.691737, -75.225713), Label = "Cottingham Stadium",              Address = "Historical Location",  Type = PinType.Place, PinPageType = typeof(PinPages.Cottingham)           });
+            pins.Add(new GuidePin { Position = new Position(40.690811, -75.227308), Label = "Paxinosa Elementary School",      Address = "Educational Facility", Type = PinType.Place, PinPageType = typeof(PinPages.Paxinosa)             });
+            pins.Add(new GuidePin { Position = new Position(40.684204, -75.243630), Label = "Wilson Area High School",         Address = "Educational Facility", Type = PinType.Place, PinPageType = typeof(PinPages.WilsonAreaHighSchool) });
 
-            map.Pins.Add(pin1 );
-            map.Pins.Add(pin2 );
-            map.Pins.Add(pin3 );
-            map.Pins.Add(pin4 );
-            map.Pins.Add(pin5 );
-            map.Pins.Add(pin6 );
-            map.Pins.Add(pin7 );
-            map.Pins.Add(pin8 );
-            map.Pins.Add(pin9 );
-            map.Pins.Add(pin10);
-            map.Pins.Add(pin11);
-            map.Pins.Add(pin12);
-            map.Pins.Add(pin13);
-            map.Pins.Add(pin14);
-            map.Pins.Add(pin15);
-            map.Pins.Add(pin16);
-            map.Pins.Add(pin17);
+
+            // Set up all the click events and add each pin to the map
+            foreach (var pin in pins)
+            {
+                pin.Clicked += (sender, e) => {
+                    GuidePin p = (GuidePin)sender;
+                    Navigation.PushAsync((Page)Activator.CreateInstance(p.PinPageType));
+                    };
+
+                map.Pins.Add(pin);
+            }
+
 
             SearchBar searchBar = new SearchBar
             {
@@ -159,6 +138,7 @@ namespace EastonCityGuide.Views
                     }
                 }
             }
+
 
             
             

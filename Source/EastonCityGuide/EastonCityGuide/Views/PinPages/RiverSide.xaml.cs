@@ -14,7 +14,6 @@ namespace EastonCityGuide.Views.PinPages
     {
         public RiverSide()
         {
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
 
             async void ButtonClicked(object sender, EventArgs e)
             {
@@ -27,8 +26,7 @@ namespace EastonCityGuide.Views.PinPages
             };
             voice.Clicked += (sender, e) =>
             {
-                player.Load("Rick.mp3");
-                player.Play();
+                App.Music("RiverSide");
             };
 
             Image photo = new Image
