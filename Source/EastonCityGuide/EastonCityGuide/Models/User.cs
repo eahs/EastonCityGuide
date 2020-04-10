@@ -16,7 +16,7 @@ namespace EastonCityGuide.Models
 
         public bool CheckInformation()
         {
-            if (this.Username.Equals("TOES") && this.Password.Equals("toes"))
+            if (this.Username.Equals("NOT_INTO_TOES") && this.Password.Equals("not_into_toes"))
                 return true;
             else
                 return false;
