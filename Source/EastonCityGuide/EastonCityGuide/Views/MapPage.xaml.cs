@@ -97,22 +97,6 @@ namespace EastonCityGuide.Views
                 FontAttributes = FontAttributes.None
             };
 
-            Button button = new Button
-            {
-                Text = "Routing",
-                VerticalOptions = LayoutOptions.Start,
-                HorizontalOptions = LayoutOptions.Fill,
-                BackgroundColor = Color.OrangeRed,
-                FontAttributes = FontAttributes.Bold,
-                FontSize = 18,
-            };
-            
-            button.Clicked += (sender, args) =>
-            {
-                 button = (Button)sender;
-                 Navigation.PushAsync(new RoutingPage());
-            };
-
             ListView searchResults = new ListView
             {
                 HorizontalOptions = LayoutOptions.Fill,
@@ -138,9 +122,6 @@ namespace EastonCityGuide.Views
                     }
                 }
             }
-
-
-            
             
             searchBar.TextChanged += OnTextChanged;
             searchBar.SearchButtonPressed += OnSearchButtonPressed;
@@ -151,7 +132,6 @@ namespace EastonCityGuide.Views
             var stack = new StackLayout { Spacing = 0 };
             stack.Children.Add(searchBar);
             stack.Children.Add(map);
-            stack.Children.Add(button);
             stack.Children.Add(slider);
             Content = stack;
         }

@@ -17,12 +17,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\JunkPage.xaml" />
+    <EmbeddedResource Remove="Views\RoutingPage.xaml" />
     <EmbeddedResource Remove="Views\TEST.xaml" />
     <EmbeddedResource Remove="Views\MyView.xaml" />
     <EmbeddedResource Remove="Views\MyPage.xaml" />
     <EmbeddedResource Remove="Views\PinPages\MyPage.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Views\RoutingPage.xaml.cs" />
     <Compile Remove="Views\TEST.xaml.cs" />
     <Compile Remove="Views\MapPage copy.cs" />
     <Compile Remove="Views\TESTING.xaml.cs" />

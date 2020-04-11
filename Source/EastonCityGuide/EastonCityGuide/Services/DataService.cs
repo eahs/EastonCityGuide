@@ -61,6 +61,14 @@ namespace EastonCityGuide.Services
            "Christopher",
            "Columbus",
 
+           "Cottingham Stadium",
+           "Cottingham",
+
+           "EastonAreaHighSchool",
+           "EastonHighSchool",
+           "EastonHS",
+           "EastonSchool",
+
            "Easton-PBurg Bridge",
            "Bridge",
 
@@ -69,6 +77,11 @@ namespace EastonCityGuide.Services
 
            "Easton Public Market",
            "Market",
+
+           "Karl Stirner Arts Trail",
+           "KarlStirnerArtsTrail",
+           "Arts Trail",
+           "ArtsTrail",
 
            "Larry Holmes Statue",
            "Larry Holmes",
@@ -83,6 +96,10 @@ namespace EastonCityGuide.Services
            "Nurture Nature",
            "Nature Center",
 
+           "Paxinosa Elementary School",
+           "PaxinosaElementarySchool",
+           "Paxinosa",
+
            "RiverSide Park",
            "RiverSide",
 
@@ -90,7 +107,18 @@ namespace EastonCityGuide.Services
            "Sigal",
 
            "State Theatre",
-           "Theatre"
+           "Theatre",
+
+           "Vietnam Memorial",
+           "VietnamMemorial",
+           "Memorial",
+           "Vietnam",
+
+           "Wilson Area High School",
+           "WilsonAreaHighSchool",
+           "WilsonHighSchool",
+           "WilsonHS",
+           "Wilson",
         };
 
         public static List<Position> Locations { get; } = new List<Position>
@@ -104,6 +132,14 @@ namespace EastonCityGuide.Services
             new Position(40.692109, -75.205205),
             new Position(40.692109, -75.205205),
 
+            new Position(40.691737, -75.225713),
+            new Position(40.691737, -75.225713),
+
+            new Position(40.682571, -75.252674),
+            new Position(40.682571, -75.252674),
+            new Position(40.682571, -75.252674),
+            new Position(40.682571, -75.252674),
+
             new Position(40.694538, -75.203715),
             new Position(40.694538, -75.203715),
 
@@ -113,6 +149,11 @@ namespace EastonCityGuide.Services
             new Position(40.691281, -75.210421),
             new Position(40.691281, -75.210421),
 
+            new Position(40.696192, -75.228143),
+            new Position(40.696192, -75.228143),
+            new Position(40.696192, -75.228143),
+            new Position(40.696192, -75.228143),
+
             new Position(40.689864, -75.205397),
             new Position(40.689864, -75.205397),
             new Position(40.689864, -75.205397),
@@ -125,6 +166,10 @@ namespace EastonCityGuide.Services
             new Position(40.690585, -75.213675),
             new Position(40.690585, -75.213675),
             new Position(40.690585, -75.213675),
+
+            new Position(40.690811, -75.227308),
+            new Position(40.690811, -75.227308),
+            new Position(40.690811, -75.227308),
 
             new Position(40.692191, -75.205048),
             new Position(40.692191, -75.205048),
@@ -133,7 +178,18 @@ namespace EastonCityGuide.Services
             new Position(40.690848, -75.210674),
 
             new Position(40.691389, -75.212500),
-            new Position(40.691389, -75.212500)
+            new Position(40.691389, -75.212500),
+
+            new Position(40.682574, -75.250029),
+            new Position(40.682574, -75.250029),
+            new Position(40.682574, -75.250029),
+            new Position(40.682574, -75.250029),
+
+            new Position(40.684204, -75.243630),
+            new Position(40.684204, -75.243630),
+            new Position(40.684204, -75.243630),
+            new Position(40.684204, -75.243630),
+            new Position(40.684204, -75.243630),
         };
 
         public static List<string> GetSearchResults(string queryString)
